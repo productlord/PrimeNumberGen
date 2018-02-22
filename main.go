@@ -39,6 +39,9 @@ func primenumLister(){
 		ch3 := make( chan int)
 		go getPrime(ch2,ch3,primenum)
 		ch2 = ch3
+		if primenum > 50000 {
+			break
+		}
 
 	}
 
